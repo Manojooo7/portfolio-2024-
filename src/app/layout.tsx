@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
+import {Inter, Calistoga} from "next/font/google"
 import "./globals.css";
+
+const inter = Inter({subsets: ["latin"], variable: "--font-sans"})
+
 
 export const metadata: Metadata = {
   title: "My Portfolio",
@@ -13,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="bg-gray-900 text-white antialiased">{children}</body>
     </html>
   );
 }
