@@ -1,16 +1,62 @@
 // Imports
 import memojiImages from '@/assets/images/memoji-computer.png'
 import Image from 'next/image';
-import ArrowDown from '@/assets/icons/arrow-down.svg'
-import grainImage from '@/assets/images/grain.jpg'
+import ArrowDown from '@/assets/icons/arrow-down.svg';
+import grainImage from '@/assets/images/grain.jpg';
+import StarIcons from '@/assets/icons/star.svg';
+import { HeroOrbit } from '@/components/HeroOrbit';
+import Sparkle from '@/assets/icons/sparkle.svg';
 
 export const HeroSection = () => {
   return( 
-  <div className='py-32 md:py-48 lg:py-60 relative z-0'>
+  <div className='py-28 md:py-32 lg:py-32 relative z-0'>
+    <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
     <div className="absolute inset-0 -z-30 opacity-5" style={{backgroundImage: `url(${grainImage})`}}></div>
-    
-    <div className="absolute inset-0 size-[620px]border-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full"></div>
-    
+    <div className="size-[620px] hero-ring"></div>
+    <div className="size-[820px] hero-ring"></div>
+    <div className="size-[1020px] hero-ring"></div>
+    <div className="size-[1220px] hero-ring"></div>
+
+    <HeroOrbit size={800} rotation={-72}>
+      <StarIcons className="size-28 text-emerald-300"/>
+    </HeroOrbit>
+
+    <HeroOrbit size={550} rotation={20}>
+      <StarIcons className="size-12 text-emerald-300"/>
+    </HeroOrbit>
+
+    <HeroOrbit size={590} rotation={98}>
+      <StarIcons className="size-8 text-emerald-300"/>
+    </HeroOrbit>
+
+    <HeroOrbit size={430} rotation={-14}>
+      <Sparkle className="size-8 text-emerald-300/20"/>
+    </HeroOrbit>
+
+    <HeroOrbit size={440} rotation={79}>
+      <Sparkle className="size-5 text-emerald-300/20" />
+    </HeroOrbit>
+
+    <HeroOrbit size={530} rotation={178}>
+      <Sparkle className="size-10 text-emerald-300/20" />
+    </HeroOrbit>
+
+    <HeroOrbit size={710} rotation={144}>
+      <Sparkle className="size-16 text-emerald-300/20"/>
+    </HeroOrbit>
+
+    <HeroOrbit size={720} rotation={85}>
+      <div className="size-3 rounded-full text-emerald-300/20"/>
+    </HeroOrbit>
+
+    <HeroOrbit size={520} rotation={-41}>
+      <div className="size-2 rounded-full text-emerald-300/20"/>
+    </HeroOrbit>
+
+    <HeroOrbit size={650} rotation={-5}>
+      <div className="size-2 rounded-full text-emerald-300/20"/>
+    </HeroOrbit>
+  </div>
     <div className="container">
       <div className="flex flex-col items-center">
       <Image src={memojiImages} className='size-[100px]' alt= "person"/>
@@ -20,7 +66,7 @@ export const HeroSection = () => {
       </div>
       </div>
       <div className="max-w-lg mx-auto">
-      <h1 className='font-serif text-5xl text-center mt-8 tracking-wide'>
+      <h1 className='font-serif text-3xl md:text-5xl lg:text-5xl text-center mt-8 tracking-wide'>
         Building Exceptional User Experience</h1>
       <p className='mt-4 text-center text-white/60 md:text-lg'>I specialize in transforming designs into a functional high-performing web application. Lets discuss your next project</p>
       </div>
