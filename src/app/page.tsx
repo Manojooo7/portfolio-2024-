@@ -1,4 +1,4 @@
-import { Header, Footer, HeroSection, ContactSection, ProjectsSection, AboutSection } from "@/sections/Index";
+import { Header, Footer, HeroSection, ContactSection, ProjectsSection, TapeSection, AboutSection } from "@/sections/Index";
 
 export default function Home() {
   return (
@@ -6,6 +6,7 @@ export default function Home() {
       <Header/>
       <HeroSection/>
       <ProjectsSection/>
+      <TapeSection/>
     </div>
   );
 }
