@@ -9,7 +9,7 @@ import Sparkle from '@/assets/icons/sparkle.svg';
 
 export const HeroSection = () => {
   return( 
-  <div className='py-28 md:py-32 lg:py-32 relative z-0'>
+  <div className='py-28 md:py-32 lg:py-32 relative z-0 overflow-x-clip'>
     <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
     <div className="absolute inset-0 -z-30 opacity-5" style={{backgroundImage: `url(${grainImage})`}}></div>
     <div className="size-[620px] hero-ring"></div>
