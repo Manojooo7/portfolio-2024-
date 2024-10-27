@@ -6,6 +6,7 @@ import CheckIcon from '@/assets/icons/check-circle.svg';
 import ArroupRightICon from '@/assets/icons/arrow-up-right.svg';
 import { url } from "inspector";
 import grainImage from "@/assets/images/grain.jpg";
+import { SectionHeader } from "@/components/SectionHeader";
 
 const portfolioProjects = [
   {
@@ -50,11 +51,11 @@ export const ProjectsSection = () => {
   return(
   <section className="pb-16 lg:py-24">
   <div className="container">
-    <div className="flex justify-center">
-    <p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-center bg-clip-text text-transparent">Real-world-projects</p>
-    </div>
-    <h2 className="font-serif text-3xl md:text-5xl text-center mt-6">Featured Projects</h2>
-    <p className="text-center md:text-lg lg:text-xl max-w-mid text-white/60 mt-4 mx-auto">See How i transform concepts into engaging digital experience</p>
+    <SectionHeader
+      heading="Real-world-projects"
+      title="Featured Projects"
+      description="See How i transform concepts into engaging digital experience"
+    />
     <div className="flex flex-col mt-10 md:mt-20 gap-20">
       {portfolioProjects.map((project) => (
         <div className="px-8 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-18 bg-gray-800 rounded-3xl relative overflow-hidden z-0 after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20 after:pointer-events-none" key={project.title}>
